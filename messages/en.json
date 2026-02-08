@@ -1,0 +1,92 @@
+{
+  "Header": {
+    "home": "Home",
+    "mlProjects": "ML Projects",
+    "webProjects": "Web Projects",
+    "lang": "RU"
+  },
+  "Hero": {
+    "badge": "Hello, I'm",
+    "name": "Mina N. F.",
+    "role": "ML Engineer & Full Stack Developer",
+    "description": "I build intelligent systems and modern web applications. Passionate about merging machine learning with scalable, beautiful full-stack solutions.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch"
+  },
+  "Featured": {
+    "title": "Featured Work",
+    "subtitle": "A selection of my best projects across ML and web development",
+    "mlTitle": "Machine Learning Projects",
+    "webTitle": "Full Stack Web Projects",
+    "viewProject": "View Project →"
+  },
+  "About": {
+    "title": "About Me",
+    "description": "I'm a software engineer with 5+ years of experience specializing in machine learning and full-stack web development.",
+    "techStack": "Tech Stack"
+  },
+  "Footer": {
+    "rights": "© 2025 Mina N. F. All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS & Framer Motion"
+  },
+  "MobileMenu": {
+    "open": "Open menu",
+    "close": "Close menu"
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Page not found / Страница не найдена",
+    "backHome": "← Home / Главная"
+  },
+  "Projects": {
+    "ml": {
+      "title": "Machine Learning Projects",
+      "subtitle": "AI models, data pipelines, and intelligent systems I've built",
+      "p1": {
+        "title": "COVID-19 Chest X-Ray Detector",
+        "description": "A deep learning pipeline for binary classification of COVID-19 vs Normalchest X-rays."
+      },
+      "p2": {
+        "title": "Medical Image Classifier",
+        "description": "Deep learning model using EfficientNet-B4 for classifying chest X-rays into 14 pathological conditions. Trained on 112K images with attention-guided Grad-CAM visualizations."
+      },
+      "p3": {
+        "title": "Recommendation System",
+        "description": "Hybrid collaborative-content filtering engine for e-commerce. Combines matrix factorization with deep embeddings to deliver personalized product recommendations to 50K+ users."
+      },
+      "p4": {
+        "title": "Time Series Forecaster",
+        "description": "Stock price prediction model using Temporal Fusion Transformers. Processes 15 years of OHLCV data with multi-horizon forecasting and interpretable attention weights."
+      }
+    },
+    "web": {
+      "title": "Full Stack Web Projects",
+      "subtitle": "Modern web applications and APIs I've designed and developed",
+      "p1": {
+        "title": "E-Commerce Platform",
+        "description": "Full-featured marketplace built with Next.js, Stripe payments, PostgreSQL, and Redis caching. Supports multi-vendor storefronts, real-time inventory, and admin dashboards."
+      },
+      "p2": {
+        "title": "Real-Time Chat Application",
+        "description": "WebSocket-powered messaging platform with end-to-end encryption, file sharing, and video calls. Built with React, Node.js, Socket.io, and MongoDB."
+      },
+      "p3": {
+        "title": "Project Management Tool",
+        "description": "Kanban-style project tracker with drag-and-drop, real-time collaboration, Gantt charts, and sprint planning. Architected with Next.js, tRPC, and Prisma."
+      },
+      "p4": {
+        "title": "Analytics Dashboard",
+        "description": "Interactive business intelligence dashboard with dynamic charts, PDF report generation, and role-based access control. Built with React, D3.js, Express, and PostgreSQL."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "namePlaceholder": "Mina N. F.",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!"
+  }
+}

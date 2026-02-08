@@ -2,45 +2,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { getTranslations } from "next-intl/server";
+import { getAllWebProjects, Project } from "@/lib/projects";
 
 export default async function WebProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations("Projects.web");
+  const tProjects = await getTranslations("Projects");
 
-  const projects = [
-    {
-      title: t("p1.title"),
-      description: t("p1.description"),
-      tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis"],
-      gradient: "bg-gradient-to-br from-[#10b981] to-[#06b6d4]",
-      category: "Full Stack",
-      buttonText: "Live Demo"
-    },
-    {
-      title: t("p2.title"),
-      description: t("p2.description"),
-      tags: ["React", "Node.js", "Socket.io", "MongoDB", "WebRTC"],
-      gradient: "bg-gradient-to-br from-[#6366f1] to-[#8b5cf6]",
-      category: "Full Stack",
-      buttonText: "Live Demo"
-    },
-    {
-      title: t("p3.title"),
-      description: t("p3.description"),
-      tags: ["Next.js", "tRPC", "Prisma", "Tailwind CSS", "Zustand"],
-      gradient: "bg-gradient-to-br from-[#f43f5e] to-[#ec4899]",
-      category: "Full Stack",
-      buttonText: "Source Code"
-    },
-    {
-      title: t("p4.title"),
-      description: t("p4.description"),
-      tags: ["React", "D3.js", "Express", "PostgreSQL", "JWT"],
-      gradient: "bg-gradient-to-br from-[#f59e0b] to-[#f97316]",
-      category: "Full Stack",
-      buttonText: "Live Demo"
-    }
-  ];
+  // Get all web projects from shared data
+  const allProjects = getAllWebProjects();
+
+  // Transform projects to resolve translation keys
+  const projects = allProjects.map((project: Project) => ({
+    title: tProjects(project.titleKey),
+    description: tProjects(project.descriptionKey),
+    tags: project.tags,
+    gradient: project.gradient,
+    category: project.category,
+    image: project.image,
+    demoLink: project.demoLink,
+    repoLink: project.repoLink,
+    buttonText: project.buttonText || "View Project"
+  }));
 
   return (
     <main className="min-h-screen">

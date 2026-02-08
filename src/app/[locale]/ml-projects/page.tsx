@@ -2,51 +2,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { getTranslations } from "next-intl/server";
+import { getAllMLProjects, Project } from "@/lib/projects";
 
 export default async function MLProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations("Projects.ml");
+  const tProjects = await getTranslations("Projects");
 
-  const projects = [
-    {
-      title: t("p1.title"),
-      description: t("p1.description"),
-      tags: ["Python", "PyTorch", "BERT", "FastAPI", "Docker"],
-      gradient: "bg-gradient-to-br from-[#7c3aed] to-[#3b82f6]",
-      category: "ML / AI",
-      buttonText: "Live Demo",
-      demoLink: "https://huggingface.co/spaces/minanabil96/mina_covid-xray-detector",
-      repoLink: "https://github.com/yourusername/your-repo",
-      image: "/images/projects/ml/covid.png"
-    },
-    {
-      title: t("p2.title"),
-      description: t("p2.description"),
-      tags: ["Python", "TensorFlow", "EfficientNet", "Grad-CAM", "AWS"],
-      gradient: "bg-gradient-to-br from-[#ec4899] to-[#8b5cf6]",
-      category: "ML / AI",
-      buttonText: "Source Code",
-      image: "/images/projects/ml/covid.png"
-    },
-    {
-      title: t("p3.title"),
-      description: t("p3.description"),
-      tags: ["Python", "Scikit-learn", "TensorFlow", "Redis", "PostgreSQL"],
-      gradient: "bg-gradient-to-br from-[#06b6d4] to-[#14b8a6]",
-      category: "ML / AI",
-      buttonText: "Source Code",
-      image: "/images/projects/ml/covid.png"
-    },
-    {
-      title: t("p4.title"),
-      description: t("p4.description"),
-      tags: ["Python", "PyTorch", "Transformers", "Pandas", "Plotly"],
-      gradient: "bg-gradient-to-br from-[#f97316] to-[#ef4444]",
-      category: "ML / AI",
-      buttonText: "Source Code",
-      image: "/images/projects/ml/covid.png"
-    }
-  ];
+  // Get all ML projects from shared data
+  const allProjects = getAllMLProjects();
+
+  // Transform projects to resolve translation keys
+  const projects = allProjects.map((project: Project) => ({
+    title: tProjects(project.titleKey),
+    description: tProjects(project.descriptionKey),
+    tags: project.tags,
+    gradient: project.gradient,
+    category: project.category,
+    image: project.image,
+    demoLink: project.demoLink,
+    repoLink: project.repoLink,
+    buttonText: project.buttonText || "View Project"
+  }));
 
   return (
     <main className="min-h-screen">

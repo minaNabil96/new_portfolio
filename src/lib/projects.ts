@@ -5,7 +5,7 @@ export interface Project {
   tags: string[];
   gradient: string;
   category: string;
-  image: string;
+  image?: string;
   demoLink?: string;
   repoLink?: string;
   buttonText?: string;
@@ -17,7 +17,7 @@ export const mlProjects: Project[] = [
     id: "covid-detector",
     titleKey: "ml.p1.title",
     descriptionKey: "ml.p1.description",
-    tags: ["Python", "PyTorch", "BERT", "FastAPI", "Docker"],
+    tags: ["Python","PyTorch","Computer Vision","Deep Learning","Streamlit","ResNet","Transfer Learning","Hugging Face","Scikit-learn","Pandas"],
     gradient: "bg-gradient-to-br from-[#7c3aed] to-[#3b82f6]",
     category: "ML / AI",
     image: "/images/projects/ml/covid.png",
@@ -33,7 +33,7 @@ export const mlProjects: Project[] = [
     tags: ["Python", "TensorFlow", "EfficientNet", "Grad-CAM", "AWS"],
     gradient: "bg-gradient-to-br from-[#ec4899] to-[#8b5cf6]",
     category: "ML / AI",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Source Code",
     featured: true
   },
@@ -44,7 +44,7 @@ export const mlProjects: Project[] = [
     tags: ["Python", "Scikit-learn", "TensorFlow", "Redis", "PostgreSQL"],
     gradient: "bg-gradient-to-br from-[#06b6d4] to-[#14b8a6]",
     category: "ML / AI",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Source Code"
   },
   {
@@ -54,7 +54,7 @@ export const mlProjects: Project[] = [
     tags: ["Python", "PyTorch", "Transformers", "Pandas", "Plotly"],
     gradient: "bg-gradient-to-br from-[#f97316] to-[#ef4444]",
     category: "ML / AI",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Source Code"
   }
 ];
@@ -67,7 +67,7 @@ export const webProjects: Project[] = [
     tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Redis"],
     gradient: "bg-gradient-to-br from-[#10b981] to-[#06b6d4]",
     category: "Full Stack",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Live Demo",
     featured: true
   },
@@ -78,7 +78,7 @@ export const webProjects: Project[] = [
     tags: ["React", "Node.js", "Socket.io", "MongoDB", "WebRTC"],
     gradient: "bg-gradient-to-br from-[#6366f1] to-[#8b5cf6]",
     category: "Full Stack",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Live Demo",
     featured: true
   },
@@ -89,7 +89,7 @@ export const webProjects: Project[] = [
     tags: ["Next.js", "tRPC", "Prisma", "Tailwind CSS", "Zustand"],
     gradient: "bg-gradient-to-br from-[#f43f5e] to-[#ec4899]",
     category: "Full Stack",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Source Code"
   },
   {
@@ -99,7 +99,7 @@ export const webProjects: Project[] = [
     tags: ["React", "D3.js", "Express", "PostgreSQL", "JWT"],
     gradient: "bg-gradient-to-br from-[#f59e0b] to-[#f97316]",
     category: "Full Stack",
-    image: "/images/projects/ml/covid.png",
+    // image: "/images/projects/ml/covid.png",
     buttonText: "Live Demo"
   }
 ];

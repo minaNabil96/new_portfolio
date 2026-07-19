@@ -1,15 +1,15 @@
 {
   "Header": {
     "home": "Home",
-    "mlProjects": "ML Projects",
-    "webProjects": "Web Projects",
+    "projects": "Projects",
+    "about": "About",
     "lang": "RU"
   },
   "Hero": {
     "badge": "Hello, I'm",
     "name": "Mina N. F.",
-    "role": "ML Engineer & Full Stack Developer",
-    "description": "I build intelligent systems and modern web applications. Passionate about merging machine learning with scalable, beautiful full-stack solutions.",
+    "role": "Full Stack Developer & Prompt Engineer",
+    "description": "I build intelligent systems, modern web applications, and AI-driven workflows. Passionate about merging machine learning, prompt engineering, and scalable full-stack solutions.",
     "viewProjects": "View Projects",
     "getInTouch": "Get in Touch"
   },
@@ -22,8 +22,31 @@
   },
   "About": {
     "title": "About Me",
-    "description": "I'm a software engineer with 5+ years of experience specializing in machine learning and full-stack web development.",
-    "techStack": "Tech Stack"
+    "name": "Mina Hanna",
+    "role": "AI Engineering Graduate Student",
+    "location": "Saint Petersburg, Russia",
+    "phone": "+7 (991) 014-17-37",
+    "email": "minanabil96@yandex.com",
+    "nationality": "Egyptian",
+    "languages": "Arabic (Native), English (Good), Russian (Beginner/A1)",
+    "summary": "Dedicated AI Implementation Specialist and current Master's student at LETI University, specializing in deploying AI-driven services and prompt engineering workflows. Leveraging 3.5 years of solid technical experience in full stack development to bridge the gap between complex AI models and practical business applications.",
+    "experienceTitle": "Professional Experience",
+    "experienceRole": "Full Stack Developer (Transitioning to AI Implementation)",
+    "experienceCompany": "Indra Sistemas (Suez Canal Tunnels Project 'Tahia Misr')",
+    "experiencePeriod": "Nov 2019 – May 2023",
+    "experienceLocation": "Suez, Egypt",
+    "experience1": "Developed and maintained backend infrastructure for mission-critical monitoring systems, providing a foundation for high-reliability data pipelines.",
+    "experience2": "Collaborated on cross-functional teams to integrate modern web dashboards with legacy control systems, focusing on data accessibility and real-time processing.",
+    "experience3": "Applied structured development methodologies (SDLC) to ensure scalable, secure, and maintainable software delivery in a high-stakes environment.",
+    "experience4": "Utilized Python and JavaScript to optimize system workflows, laying the groundwork for implementing automated AI-driven diagnostic tools.",
+    "educationTitle": "Education",
+    "education1": "Master of Science in Prompt Engineering and AI Service Development — Saint Petersburg Electrotechnical University (LETI), Saint Petersburg, Russia (2025 – Present, Completed Year 1)",
+    "education2": "Bachelor of Science in Management Information Systems (MIS) — Suez Management Information Systems Institute, Suez, Egypt",
+    "techStack": "Technical Skills",
+    "skillAI": "AI Implementation: LLM Integration, Prompt Engineering, RAG Systems, AI Agent Deployment, Automation Workflows",
+    "skillBackend": "Backend & APIs: Python (Django, FastAPI), RESTful API Development, System Optimization, Database Management",
+    "skillFrontend": "Frontend: JavaScript, React/Modern Frameworks, Interactive UI for AI Services",
+    "skillInfra": "Infrastructure: Git, Docker"
   },
   "Footer": {
     "rights": "© 2025 Mina N. F. All rights reserved.",
@@ -39,46 +62,39 @@
     "backHome": "← Home / Главная"
   },
   "Projects": {
+    "title": "Projects",
+    "subtitle": "AI models, data pipelines, and intelligent systems I've built",
     "ml": {
-      "title": "Machine Learning Projects",
-      "subtitle": "AI models, data pipelines, and intelligent systems I've built",
       "p1": {
         "title": "COVID-19 Chest X-Ray Detector",
-        "description": "A deep learning pipeline for binary classification of COVID-19 vs Normalchest X-rays."
+        "description": "A deep learning pipeline for binary classification of COVID-19 vs Normal chest X-rays."
       },
       "p2": {
-        "title": "Medical Image Classifier",
-        "description": "Deep learning model using EfficientNet-B4 for classifying chest X-rays into 14 pathological conditions. Trained on 112K images with attention-guided Grad-CAM visualizations."
+        "title": "DevOps Incident Simulation Pipeline",
+        "description": "7-stage prompt engineering pipeline for SRE incident lifecycle simulation. Generates Alertmanager JSON, kubectl commands, and blameless post-mortems via Jinja2 + Dahl API (Kimi-K2.6)."
       },
       "p3": {
-        "title": "Recommendation System",
-        "description": "Hybrid collaborative-content filtering engine for e-commerce. Combines matrix factorization with deep embeddings to deliver personalized product recommendations to 50K+ users."
-      },
-      "p4": {
-        "title": "Time Series Forecaster",
-        "description": "Stock price prediction model using Temporal Fusion Transformers. Processes 15 years of OHLCV data with multi-horizon forecasting and interpretable attention weights."
+        "title": "FC25 Players Analysis",
+        "description": "Data analysis and clustering of FC25 player data using K-means, PCA, and statistical analysis. Includes Jupyter notebooks with interactive visualizations."
       }
     },
     "web": {
       "title": "Full Stack Web Projects",
       "subtitle": "Modern web applications and APIs I've designed and developed",
       "p1": {
-        "title": "E-Commerce Platform",
-        "description": "Full-featured marketplace built with Next.js, Stripe payments, PostgreSQL, and Redis caching. Supports multi-vendor storefronts, real-time inventory, and admin dashboards."
+        "title": "Science Teacher Website",
+        "description": "A modern Next.js website for a science teacher with internationalization (en/ru), Supabase backend, and responsive design. Built with TypeScript and Tailwind CSS."
       },
       "p2": {
-        "title": "Real-Time Chat Application",
-        "description": "WebSocket-powered messaging platform with end-to-end encryption, file sharing, and video calls. Built with React, Node.js, Socket.io, and MongoDB."
-      },
-      "p3": {
-        "title": "Project Management Tool",
-        "description": "Kanban-style project tracker with drag-and-drop, real-time collaboration, Gantt charts, and sprint planning. Architected with Next.js, tRPC, and Prisma."
-      },
-      "p4": {
-        "title": "Analytics Dashboard",
-        "description": "Interactive business intelligence dashboard with dynamic charts, PDF report generation, and role-based access control. Built with React, D3.js, Express, and PostgreSQL."
+        "title": "SpaceX Launch Tracker CLI",
+        "description": "A CLI application comparing Claude Opus vs Gemini 3.0 Flash on the same task. Tracks SpaceX launches via Launch Library 2 API with rich terminal UI, 10 commands, CI/CD, and 80%+ test coverage."
       }
     }
+  },
+  "ProjectsFilter": {
+    "all": "All",
+    "ml": "ML / AI",
+    "web": "Full Stack"
   },
   "Contact": {
     "title": "Get in Touch",

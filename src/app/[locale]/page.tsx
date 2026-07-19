@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Featured from "@/components/Featured";
-import About from "@/components/About";
+import ProjectsSection from "@/components/ProjectsSection";
 import Footer from "@/components/Footer";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -11,8 +10,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <main className="min-h-screen">
       <Header locale={locale} />
       <Hero />
-      <Featured />
-      <About />
+      <ProjectsSection />
       <Footer />
     </main>
   );

@@ -9,7 +9,7 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   locale: string;
-  navLinks: { name: string; href: string }[];
+  navLinks: { name: string; href: string; onClick?: (e: React.MouseEvent) => void }[];
 }
 
 export default function MobileMenu({ isOpen, onClose, locale, navLinks }: MobileMenuProps) {
@@ -27,7 +27,7 @@ export default function MobileMenu({ isOpen, onClose, locale, navLinks }: Mobile
         >
           <div className="flex flex-col h-full p-6">
             <div className="flex items-center justify-between mb-12">
-              <span className="text-xl font-bold gradient-text">AP</span>
+              <span className="text-xl font-bold gradient-text">MN</span>
               <button
                 onClick={onClose}
                 className="p-2 bg-white/5 border border-white/10 rounded-lg text-white"
@@ -38,14 +38,17 @@ export default function MobileMenu({ isOpen, onClose, locale, navLinks }: Mobile
 
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
-                  onClick={onClose}
+                  onClick={(e) => {
+                    link.onClick?.(e);
+                    onClose();
+                  }}
                   className="px-6 py-4 bg-white/5 border border-white/5 rounded-xl text-lg font-medium text-white hover:bg-white/10 transition-all"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </nav>
 

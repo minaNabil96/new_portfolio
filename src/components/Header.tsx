@@ -23,10 +23,17 @@ export default function Header({ locale }: { locale: string }) {
 
   const otherLocale = locale === "en" ? "ru" : "en";
 
+  const handleProjectsClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navLinks = [
     { name: t("home"), href: "/" },
-    { name: t("mlProjects"), href: "/ml-projects" },
-    { name: t("webProjects"), href: "/web-projects" },
+    { name: t("projects"), href: "/#projects", onClick: handleProjectsClick },
+    { name: t("about"), href: "/about" },
   ];
 
   return (
@@ -42,23 +49,24 @@ export default function Header({ locale }: { locale: string }) {
             <div className="w-10 h-10 bg-accent-purple/20 border border-accent-purple/30 rounded-xl flex items-center justify-center group-hover:bg-accent-purple/30 transition-all shadow-[0_0_15px_rgba(124,58,237,0.2)]">
               <Code2 className="w-5 h-5 text-accent-purple" />
             </div>
-            <span className="text-2xl font-black tracking-tighter gradient-text">AP</span>
+            <span className="text-2xl font-black tracking-tighter gradient-text">MN</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1 glass-nav p-1 rounded-2xl">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
+            {navLinks.map((link, index) => (
+              <a
+                key={index}
                 href={link.href}
+                onClick={link.onClick}
                 className={clsx(
                   "px-5 py-2 rounded-xl text-sm font-semibold transition-all",
-                  pathname === link.href
+                  link.href === pathname || (link.href === "/" && pathname === "/")
                     ? "bg-white/10 text-white shadow-sm"
                     : "text-muted hover:text-white hover:bg-white/5"
                 )}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </nav>
 

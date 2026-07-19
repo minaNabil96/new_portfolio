@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#1a1a2e"/>
+  <g opacity="0.15">
+    <circle cx="100" cy="80" r="180" fill="#a855f7"/>
+    <circle cx="540" cy="280" r="160" fill="#6366f1"/>
+    <circle cx="320" cy="180" r="250" fill="#7c3aed" opacity="0.3"/>
+  </g>
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+    <line x1="0" y1="60" x2="640" y2="60"/>
+    <line x1="0" y1="120" x2="640" y2="120"/>
+    <line x1="0" y1="180" x2="640" y2="180"/>
+    <line x1="0" y1="240" x2="640" y2="240"/>
+    <line x1="0" y1="300" x2="640" y2="300"/>
+  </g>
+  <g opacity="0.2">
+    <rect x="40" y="50" width="12" height="20" rx="2" fill="#a855f7"/>
+    <rect x="60" y="40" width="12" height="30" rx="2" fill="#a855f7"/>
+    <rect x="80" y="55" width="12" height="15" rx="2" fill="#6366f1"/>
+  </g>
+  <g opacity="0.2">
+    <circle cx="530" cy="100" r="4" fill="#a855f7"/>
+    <circle cx="550" cy="90" r="3" fill="#6366f1"/>
+    <circle cx="510" cy="95" r="2" fill="#a855f7"/>
+  </g>
+  <text x="320" y="175" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-weight="800" font-size="36" letter-spacing="-1">DevOps Incident</text>
+  <text x="320" y="215" text-anchor="middle" fill="white" font-family="system-ui,sans-serif" font-weight="800" font-size="36" letter-spacing="-1">Simulation Pipeline</text>
+  <rect x="240" y="250" width="160" height="2" rx="1" fill="url(#glow)"/>
+  <text x="320" y="285" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui,sans-serif" font-weight="600" font-size="13" letter-spacing="2">PROMPT ENGINEERING · SRE</text>
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg>
